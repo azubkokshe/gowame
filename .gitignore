@@ -1,0 +1,22 @@
+# Go binaries #
+###############
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go packages #
+################
+/vendor/
+
+# JetBrains GoLand IDE #
+#######################
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Other #
+#########
+.DS_Store
