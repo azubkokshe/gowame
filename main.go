@@ -39,6 +39,9 @@ func main() {
 			phone = strings.ReplaceAll(phone, "(", "")
 			phone = strings.ReplaceAll(phone, ")", "")
 			phone = strings.ReplaceAll(phone, " ", "")
+			if strings.HasPrefix(phone, "8") {
+				phone = "7" + strings.TrimPrefix(phone, "8")
+			}
 			if _, err := strconv.Atoi(phone); err != nil {
 				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Некорректный номер телефона.")
 				bot.Send(msg)
